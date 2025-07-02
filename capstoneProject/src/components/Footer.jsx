@@ -3,7 +3,7 @@ import logo from '../assets/icons_assets/logo.svg';
 
 function Footer(){
     return(
-        <h1 className="footer">
+        <footer>
             <div className="footer-logo">
                 <img src={logo} alt="Little Lemon Logo" className="logo"/>
                 &copy; 2025 Little Lemon. All rights reserved.
@@ -22,12 +22,12 @@ function Footer(){
                 <a href="https://www.instagram.com/">Instagram</a>
                 <a href="https://www.x.com/">X</a>
             </div>
-            <div className="contact">
+            <div className="footer-contact">
                 <h1>Contact</h1>
                 <a href="mailto: example@gmail.com">Email</a>
                 <a href="tel:+1234567890">Phone</a>
             </div>
-        </h1>
+        </footer>
     )
 
 }

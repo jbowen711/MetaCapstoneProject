@@ -6,13 +6,15 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 
 function App() {
+
   return (
     //Semantic HTML Structured Layout
     <>
-      <Header/>
-      <Nav/>
-      <Main/>
-      <Footer/>
+      <div className="appGrid">
+        <Header/>
+        <Main/>
+        <Footer/>
+      </div>
     </>
   )
 }
