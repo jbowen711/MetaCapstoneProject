@@ -6,7 +6,7 @@ function Footer(){
         <footer>
             <div className="footer-logo">
                 <img src={logo} alt="Little Lemon Logo" className="logo"/>
-                &copy; 2025 Little Lemon. All rights reserved.
+                <p>&copy; 2025 Little Lemon. All rights reserved.</p>
             </div>
             <div className="footer-navigation">
                 <h1>Navigation</h1>

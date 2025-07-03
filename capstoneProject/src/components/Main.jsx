@@ -1,5 +1,8 @@
 import './Main.css';
 import restaurantImage from '../assets/icons_assets/restaurant.jpg';
+import Specials from './Specials.jsx';
+import Testimonials from './Testimonials.jsx';
+import About from './About.jsx';
 
 function Main(){
     return(
@@ -18,15 +21,9 @@ function Main(){
                     <img src={restaurantImage} alt="Restaurant Image" height="350" width="500"/>
                 </div>
             </div>
-            <div className="specials">
-                <h2 className="specials-title">Specials</h2>
-            </div>
-            <div className="testimonials">
-                <h2 className="testimonials-title">Testimonials</h2>
-            </div>
-            <div className="about">
-                <h2 className="about-title">About</h2>
-            </div>
+            <Specials/>
+            <Testimonials/>
+            <About/>
         </div>
     )
 
