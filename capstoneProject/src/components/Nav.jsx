@@ -1,7 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import hamburger from '../assets/icons_assets/hamburger_menu.svg';
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 
 
@@ -12,7 +12,7 @@ function Nav(){
         { name: "Home", href: "/" },
         { name: "About", href: "/#about" },
         { name: "Menu", href: "/#menu" },
-        { name: "Reservations", href: "/#reservations" },
+        { name: "Reservations", href: "/booking", useLink: true},
         { name: "Order Online", href: "/#orderOnline" },
         { name: "Login", href: "/#login" },
     ];
@@ -28,6 +28,14 @@ function Nav(){
             <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                 {navLinks.map((link, index) => (
                     <li key={index}>
+                        {link.useLink ? (
+                            <Link
+                                to={link.href}
+                                className="nav-link"
+                                onClick={() => setIsOpen(false)}>
+                                    {link.name}
+                            </Link>
+                        ) :
                               <HashLink
                                 smooth
                                 to={link.href}
@@ -35,6 +43,7 @@ function Nav(){
                                 onClick={() => setIsOpen(false)}>
                                     {link.name}
                                 </HashLink>
+                        }
                     </li>
                 ))}
             </ul>

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../assets/icons_assets/logo.svg';
+import { Link } from "react-router-dom";
 
 function Footer(){
     return(
@@ -10,11 +11,11 @@ function Footer(){
             </div>
             <div className="footer-navigation">
                 <h1>Navigation</h1>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#menu">Menu</a>
-                <a href="#reservations">Reservations</a>
-                <a href="#contact">Contact</a> 
+                <a href="/">Home</a>
+                <a href="/#about">About</a>
+                <a href="/#menu">Menu</a>
+                <Link to="/booking"><a href="#reservations">Reservations</a></Link>
+                <a href="/#contact">Contact</a>
             </div>
             <div className="footer-socials">
                 <h1>Socials</h1>

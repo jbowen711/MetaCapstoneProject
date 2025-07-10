@@ -1,5 +1,6 @@
 import React from "react"
 import restaurantImage from '../assets/icons_assets/restaurant.jpg';
+import { Link } from "react-router-dom";
 function Hero () {
     return (
         <>
@@ -11,7 +12,7 @@ function Hero () {
                     <p className="hero-description">
                     This will be the description of what is happening in the hero section of the web page. Little Lemon restaurant.
                     </p>
-                    <button className="hero-button">Reserve a Table</button>
+                    <Link to="/booking"><button className="hero-button">Reserve a Table</button></Link>
                 </div>
                 <div className="hero-image">
                     <img src={restaurantImage} alt="Restaurant Image" height="350" width="500"/>
