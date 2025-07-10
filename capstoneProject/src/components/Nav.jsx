@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import hamburger from '../assets/icons_assets/hamburger_menu.svg';
+import { HashLink } from "react-router-hash-link";
 
 
 
@@ -8,12 +9,12 @@ function Nav(){
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { name: "Home", href: "#home" },
-        { name: "About", href: "#about" },
-        { name: "Menu", href: "#menu" },
-        { name: "Reservations", href: "#reservations" },
-        { name: "Order Online", href: "#orderOnline" },
-        { name: "Login", href: "#login" },
+        { name: "Home", href: "/" },
+        { name: "About", href: "/#about" },
+        { name: "Menu", href: "/#menu" },
+        { name: "Reservations", href: "/#reservations" },
+        { name: "Order Online", href: "/#orderOnline" },
+        { name: "Login", href: "/#login" },
     ];
 
     return(
@@ -27,7 +28,13 @@ function Nav(){
             <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                 {navLinks.map((link, index) => (
                     <li key={index}>
-                        <a href={link.href} className="nav-link">{link.name}</a>
+                              <HashLink
+                                smooth
+                                to={link.href}
+                                className="nav-link"
+                                onClick={() => setIsOpen(false)}>
+                                    {link.name}
+                                </HashLink>
                     </li>
                 ))}
             </ul>
