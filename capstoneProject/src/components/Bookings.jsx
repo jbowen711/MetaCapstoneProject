@@ -1,6 +1,7 @@
 import React from "react";
 import { submitAPI } from "../apis/fetchingTimes";
 import { useNavigate } from "react-router-dom";
+import './Reservation.css'
 
 function Bookings({setFormData, formData, availableTimes, dispatch}) {
 
@@ -33,7 +34,9 @@ function Bookings({setFormData, formData, availableTimes, dispatch}) {
     };
 
     return (
-        <div className="bookings">
+        <>
+            <h1 className="Reservation-title">Make A Reservation</h1>
+            <div className="bookings">
             <form className="bookings-form" onSubmit={handleSubmit}>
                 <label className="date"> Select Date
                 <input type="date" name="date" id="res-date" value={formData.date} onChange={handleChange} required/>
@@ -59,6 +62,7 @@ function Bookings({setFormData, formData, availableTimes, dispatch}) {
                 <input type="submit"/>
             </form>
         </div>
+    </>
     );
 }
 
