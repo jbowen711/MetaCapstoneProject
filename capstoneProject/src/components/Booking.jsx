@@ -3,7 +3,7 @@ import Bookings from "./Bookings";
 
 
 
-function Booking() {
+function Booking({availableTimes, dispatch}) {
     const [formData, setFormData] = useState({
         date: "",
         time: "5:00 PM",
@@ -14,7 +14,7 @@ function Booking() {
     return (
         <div className="bookings-wrapper">
             <h1 className="Reservation-title">Make A Reservation</h1>
-            <Bookings className="bookings" formData={formData} setFormData={setFormData}/>
+            <Bookings className="bookings" formData={formData} setFormData={setFormData} availableTimes={availableTimes} dispatch={dispatch}/>
         </div>
     );
 }

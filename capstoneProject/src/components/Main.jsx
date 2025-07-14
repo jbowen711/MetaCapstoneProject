@@ -3,8 +3,9 @@ import Specials from './Specials.jsx';
 import Testimonials from './Testimonials.jsx';
 import About from './About.jsx';
 import Hero from './Hero.jsx'
-import Bookings from './Booking.jsx';
+import BookingPage from './BookingPage.jsx';
 import { Routes, Route} from "react-router-dom";
+import ConfirmedBooking from './ConfirmedBooking.jsx';
 
 function Main() {
   return (
@@ -19,7 +20,8 @@ function Main() {
           </>
         }
         />
-        <Route path="/booking" element={<Bookings />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/bookingconfirmed" element={<ConfirmedBooking/>}/>
       </Routes>
     </div>
   );
